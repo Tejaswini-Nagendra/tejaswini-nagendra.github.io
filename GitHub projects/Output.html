@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="d:\GitHub projects\scripts\Dasara.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Booking Confirmed - Mysore Dasara</title>
+<style>
+  body{margin:0; background:#fff; display:flex; justify-content:center; font-family:'Segoe UI', sans-serif;}
+  .phone{
+    width:500px; background:#fde68a; border-radius:35px; margin:20px; padding-bottom:25px;
+    overflow:hidden; box-shadow:0 0 30px rgba(0,0,0,0.5); border:4px solid #222;
+  }
+  .header{
+    background:#fff; margin:15px; border-radius:15px; padding:14px; 
+    display:flex; align-items:center; color:black; border:1.5px solid #fde68a;
+  }
+  .header h1{margin:0 auto; font-size:22px; font-family:serif;}
+  .pattern{color:#d4a76a; text-align:center; letter-spacing:4px; font-size:14px; margin:5px 0;}
+  .success-icon{text-align:center; font-size:60px; margin:20px 0 10px;}
+  .ticket-card{
+    background:rgba(255,255,255,0.95); margin:15px; border-radius:22px; padding:20px;
+  }
+  .ticket-card h2{text-align:center; color:#1a7a3a; margin:0; font-size:22px;}
+  .ticket-card p.sub{text-align:center; color:#666; font-size:13px; margin:5px 0 20px;}
+  .row{display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px dashed #d4a76a; font-size:14px;}
+  .row b{color:#b8860b;}
+  .row span{color:#555;}
+  .id-box{
+    background:#fde68a; border:1.5px dashed #4a1028; border-radius:12px; 
+    padding:12px; text-align:center; margin:20px 0;
+  }
+  .id-box small{color:#4a1028; font-size:11px; letter-spacing:1px;}
+  .id-box h1{margin:5px 0 0; color:#4a1028; font-size:28px; letter-spacing:2px;}
+  .btns{display:flex; gap:10px; margin:15px;}
+  .btn{
+    flex:1; padding:14px; border-radius:25px; font-weight:bold; cursor:pointer; border:none; font-size:14px;
+  }
+  .btn-home{background:#fff; color:#b8860b; border:1.5px solid #fde68a;}
+  .btn-home:hover{background:#b8860b; color:#fff;}
+  .btn-print{background:#b8860b; color:#fff; border:1.5px solid #c9a86a;}
+  .btn-print:hover{background:#fff; color:#b8860b;}
+  .footer{color:#fde68a; font-size:10px; text-align:center; margin-top:10px; opacity:0.7;}
+</style>
+</head>
+<body>
+
+<div class="phone">
+  
+  
+  <div class="header">
+    <span style="font-size:24px;" onclick="window.location.href='booking.html'">←</span><h1>Booking Confirmed</h1>
+  </div>
+  <div class="pattern">●●●●●●●●</div>
+
+  <div class="success-icon">✅</div>
+
+  <div class="ticket-card">
+    <h2>Ticket Booked!</h2>
+    <p class="sub">Your Dasara entry is confirmed</p>
+
+    <div class="id-box">
+      <small>BOOKING ID</small>
+      <h1 id="bid">MYS000000</h1>
+    </div>
+
+    <div class="row"><span>Full Name</span><b id="o_name">-</b></div>
+    <div class="row"><span>Phone</span><b id="o_phone">-</b></div>
+    <div class="row"><span>Email</span><b id="o_email">-</b></div>
+    <div class="row"><span>Event</span><b id="o_event">-</b></div>
+    <div class="row"><span>Date</span><b id="o_date">-</b></div>
+    <div class="row"><span>Tickets</span><b id="o_tickets">-</b></div>
+    <div class="row" style="border:none;"><span>Total Paid</span><b id="o_total" style="color:green;">₹0</b></div>
+  </div>
+
+  <div class="btns">
+    <button class="btn btn-print" onclick="window.print()">️ Print</button>
+    <button class="btn btn-home" onclick="window.location.href='d:/GitHub projects/Dasara-Event-Management.html'"> Home</button>
+  </div>
+  
+  <div class="footer">Show this ticket at palace entrance gate • Valid ID required</div>
+</div>
+
+<script>
+// Load data from booking.html
+let data = JSON.parse(localStorage.getItem('dasaraBooking'));
+
+if(data){
+  document.getElementById('bid').innerText = data.id;
+  document.getElementById('o_name').innerText = data.name;
+  document.getElementById('o_phone').innerText = data.phone;
+  document.getElementById('o_email').innerText = data.email;
+  document.getElementById('o_event').innerText = data.event;
+  document.getElementById('o_date').innerText = data.date;
+  document.getElementById('o_tickets').innerText = data.tickets;
+  document.getElementById('o_total').innerText = '₹' + (data.tickets * 450);
+} else {
+  document.getElementById('bid').innerText = "No Booking Found";
+}
+</script>
+
+</body>
+</html>
