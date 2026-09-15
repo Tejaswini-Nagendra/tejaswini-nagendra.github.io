@@ -25,7 +25,7 @@
 }
 .bg_image{
     /*background-image: url("d:/Learning/images/dasara_image3.jpg") ;*/
-    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("d:/GitHub projects/Images/dasara_image4.jpg");
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url("./dasara_image4.jpg");
     background-size: cover;
     height:590px;
     background-repeat: no-repeat;
