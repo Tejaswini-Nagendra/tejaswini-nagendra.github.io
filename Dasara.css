@@ -61,23 +61,15 @@
     background: linear-gradient(#b8860b,#fce2a0,#b8860b);
     transform: translateY(-2px);
 }
-.main{
-    
-   /* text-align: center;
-    padding-top: 130px;
-    font-size: 90px;
-    font-family: 'Stencil';
-    color:color-mix(in srgb, gold 80%, silver 20%) ;
-    color: silver;*/
+.main {
     color: #fff;
     font-weight: 800;
     text-shadow: 2px 2px 8px #000;
     letter-spacing: 2px;
     text-align: center;
-    padding-top:250px ;
-    font-family: Georgia; 
-    font-size: 100px;
-    
+    padding-top: 250px;
+    font-family: Georgia;
+    font-size: clamp(45px, 8vw, 100px);
 }
 .next{
     margin-top: 60px;
