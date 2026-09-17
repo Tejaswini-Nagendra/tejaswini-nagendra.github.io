@@ -4,6 +4,7 @@
     text-align:center;
     padding: 10px;  
     border-bottom: 2px solid #b8860b; 
+    position:fixed;
 }
 .t2:hover{
     color:#fff !important;
