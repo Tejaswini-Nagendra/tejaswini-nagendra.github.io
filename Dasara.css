@@ -255,7 +255,7 @@ box-shadow: 10px 10px 10px gray;
     }
 
     .head-lines {
-        position: relative !important;
+        position: fixed !important;
         width: 100% !important;
         height: auto;
         padding: 15px 10px;
