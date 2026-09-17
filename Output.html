@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="./scripts\Dasara.js"></script>
+    <script src="./Dasara.js"></script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Booking Confirmed - Mysore Dasara</title>
 <style>
-  body{margin:0; background:#fff; display:flex; justify-content:center; font-family:'Segoe UI', sans-serif;}
+  body{margin:0; background:#fff; display:flex; flex-wrap: wrap; justify-content:center; font-family:'Segoe UI', sans-serif;}
   .phone{
     width:500px; background:#fde68a; border-radius:35px; margin:20px; padding-bottom:25px;
     overflow:hidden; box-shadow:0 0 30px rgba(0,0,0,0.5); border:4px solid #222;
@@ -23,7 +23,7 @@
   }
   .ticket-card h2{text-align:center; color:#1a7a3a; margin:0; font-size:22px;}
   .ticket-card p.sub{text-align:center; color:#666; font-size:13px; margin:5px 0 20px;}
-  .row{display:flex; justify-content:space-between; padding:10px 0; border-bottom:1px dashed #d4a76a; font-size:14px;}
+  .row{display:flex; felx-wrap:wrap; justify-content:space-between; padding:10px 0; border-bottom:1px dashed #d4a76a; font-size:14px;}
   .row b{color:#b8860b;}
   .row span{color:#555;}
   .id-box{
@@ -32,7 +32,7 @@
   }
   .id-box small{color:#4a1028; font-size:11px; letter-spacing:1px;}
   .id-box h1{margin:5px 0 0; color:#4a1028; font-size:28px; letter-spacing:2px;}
-  .btns{display:flex; gap:10px; margin:15px;}
+  .btns{display:flex; felx-wrap:wrap; gap:10px; margin:15px;}
   .btn{
     flex:1; padding:14px; border-radius:25px; font-weight:bold; cursor:pointer; border:none; font-size:14px;
   }
@@ -75,7 +75,7 @@
 
   <div class="btns">
     <button class="btn btn-print" onclick="window.print()">️ Print</button>
-    <button class="btn btn-home" onclick="window.location.href='./Dasara-Event-Management.html'"> Home</button>
+    <button class="btn btn-home" onclick="window.location.href='./index.html'"> Home</button>
   </div>
   
   <div class="footer">Show this ticket at palace entrance gate • Valid ID required</div>
