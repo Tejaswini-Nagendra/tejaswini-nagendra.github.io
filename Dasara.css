@@ -26,7 +26,7 @@
     .bg_image {
     background:
         linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
-        url("../Images/dasara_image4.jpg");
+        url("../dasara_image4.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
