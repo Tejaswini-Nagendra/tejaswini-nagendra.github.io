@@ -3,6 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    width: 100%;
+    overflow-x: hidden;
+}
 body{
     margin: 0;
     overflow-x: hidden;
@@ -13,10 +19,16 @@ body{
     text-align:center;
     padding: 10px;  
     border-bottom: 2px solid #b8860b; 
-    position:fixed;
+    position: fixed !important;
     width: 100vw !important;
-    left: 0;
-    right: 0;
+    left: 0 !important;
+    right: 0 !important;
+    top: 0 !important;
+    margin: 0 !important;
+}
+.hero-lines, #home {
+    margin-top:0 !important;
+    padding-top:80px;
 }
 .t2:hover{
     color:#fff !important;
